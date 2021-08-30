@@ -1,4 +1,4 @@
-/* 
+ /* 
  * File: LCD.c  
  * Se utiliz� y se adaptaron las librer�as de Ligo George 
  * de la p�gina www.electrosome.com

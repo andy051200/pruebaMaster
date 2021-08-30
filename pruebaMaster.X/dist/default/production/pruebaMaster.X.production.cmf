@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
+$C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\pruebaMaster.X.production.o
@@ -76,13 +76,13 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\pruebaMaster.X.production.o
-7FA cinit CODE >814:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.s
-7FA cinit CODE >817:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.s
-7FA cinit CODE >828:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.s
-7FB cinit CODE >829:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.s
-7FC cinit CODE >835:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.s
-7FC cinit CODE >837:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.s
-7FD cinit CODE >838:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.s
+7FA cinit CODE >814:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.s
+7FA cinit CODE >817:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.s
+7FA cinit CODE >828:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.s
+7FB cinit CODE >829:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.s
+7FC cinit CODE >835:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.s
+7FC cinit CODE >837:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.s
+7FD cinit CODE >838:C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.s
 665 text9 CODE >13:C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster.X/LCD_diego.c
 666 text9 CODE >14:C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster.X/LCD_diego.c
 66A text9 CODE >15:C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster.X/LCD_diego.c
@@ -226,22 +226,22 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __end_of_Lcd_Init FF4 0 CODE 0 text6 dist/default/production\pruebaMaster.X.production.o
 __end_of_Lcd_Port D0E 0 CODE 0 text9 dist/default/production\pruebaMaster.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
+___sp 0 0 STACK 2 stack C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
 _main D58 0 CODE 0 maintext dist/default/production\pruebaMaster.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\pruebaMaster.X.production.o
 _Lcd_Write_Char E24 0 CODE 0 text4 dist/default/production\pruebaMaster.X.production.o
-start 0 0 CODE 0 init C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
+start 0 0 CODE 0 init C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
 __size_of_main 0 0 ABS 0 - dist/default/production\pruebaMaster.X.production.o
 Lcd_Port@a 70 0 COMMON 1 cstackCOMMON dist/default/production\pruebaMaster.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 Lcd_Write_Char@temp 72 0 COMMON 1 cstackCOMMON dist/default/production\pruebaMaster.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\pruebaMaster.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\pruebaMaster.X.production.o
@@ -251,15 +251,15 @@ __Hclrtext 0 0 ABS 0 clrtext -
 __end_of_Lcd_Write_Char E96 0 CODE 0 text4 dist/default/production\pruebaMaster.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\pruebaMaster.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
-___stacklo 0 0 ABS 0 - C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
+___stackhi 0 0 ABS 0 - C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
+___stacklo 0 0 ABS 0 - C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\pruebaMaster.X.production.o
 Lcd_Set_Cursor@temp 7A 0 COMMON 1 cstackCOMMON dist/default/production\pruebaMaster.X.production.o
 start_initialization FF4 0 CODE 0 cinit dist/default/production\pruebaMaster.X.production.o
 _osc_config DB6 0 CODE 0 text2 dist/default/production\pruebaMaster.X.production.o
 _Lcd_Write_String D0E 0 CODE 0 text3 dist/default/production\pruebaMaster.X.production.o
 __size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\pruebaMaster.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
+___int_sp 0 0 STACK 2 stack C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -311,7 +311,7 @@ __size_of_Lcd_Write_String 0 0 ABS 0 - dist/default/production\pruebaMaster.X.pr
 __stringtab 6 0 STRING 0 strings dist/default/production\pruebaMaster.X.production.o
 Lcd_Write_String@a 77 0 COMMON 1 cstackCOMMON dist/default/production\pruebaMaster.X.production.o
 Lcd_Write_String@i 75 0 COMMON 1 cstackCOMMON dist/default/production\pruebaMaster.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ANDYBO~1\AppData\Local\Temp\xcAs33s.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ANDYBO~1\AppData\Local\Temp\xcAsin4.o
 __size_of_Lcd_Clear 0 0 ABS 0 - dist/default/production\pruebaMaster.X.production.o
 __end_of_Lcd_Cmd CCA 0 CODE 0 text8 dist/default/production\pruebaMaster.X.production.o
 _Lcd_Clear C60 0 CODE 0 text7 dist/default/production\pruebaMaster.X.production.o

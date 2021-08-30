@@ -1,15 +1,15 @@
 /* 
  * File: LCD.h  
- * Se utilizó y se adaptaron las librerías de Ligo George 
- * de la página www.electrosome.com
+ * Se utilizï¿½ y se adaptaron las librerï¿½as de Ligo George 
+ * de la pï¿½gina www.electrosome.com
  * Enlace: https://electrosome.com/lcd-pic-mplab-xc8/
  * Revision history: 
  */
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef LCD_H
-#define	LCD_H
+#ifndef lcd_diego_H
+#define	lcd_diego_H
 
 #ifndef _XTAL_FREQ
 #define _XTAL_FREQ 8000000
