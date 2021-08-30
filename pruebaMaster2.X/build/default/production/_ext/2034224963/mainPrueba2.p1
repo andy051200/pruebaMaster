@@ -1,0 +1,292 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+[p mainexit ]
+"53 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 53: void setup(void);
+[v _setup `(v ~T0 @X0 0 ef ]
+"31 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/lcd_pablo.h
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/lcd_pablo.h: 31: void Lcd_Init(void);
+[v _Lcd_Init `(v ~T0 @X0 0 ef ]
+"30
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/lcd_pablo.h: 30: void Lcd_Set_Cursor(char a, char b);
+[v _Lcd_Set_Cursor `(v ~T0 @X0 0 ef2`uc`uc ]
+"33
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/lcd_pablo.h: 33: void Lcd_Write_String(char *a);
+[v _Lcd_Write_String `(v ~T0 @X0 0 ef1`*uc ]
+"3387 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
+[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
+"3449
+[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"1478
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1664
+[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
+"14 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/Osc_config.h
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/Osc_config.h: 14: void osc_config(uint8_t freq);
+[v _osc_config `(v ~T0 @X0 0 ef1`uc ]
+"15 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c
+[p x FOSC  =  INTRC_NOCLKOUT    ]
+"16
+[p x WDTE  =  OFF        ]
+"17
+[p x PWRTE  =  OFF       ]
+"18
+[p x MCLRE  =  OFF       ]
+"19
+[p x CP  =  OFF          ]
+"20
+[p x CPD  =  OFF         ]
+"21
+[p x BOREN  =  OFF       ]
+"22
+[p x IESO  =  OFF        ]
+"23
+[p x FCMEN  =  OFF       ]
+"24
+[p x LVP  =  OFF         ]
+"27
+[p x BOR4V  =  BOR40V    ]
+"28
+[p x WRT  =  OFF         ]
+"54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"230
+[; <" PORTB equ 06h ;# ">
+"292
+[; <" PORTC equ 07h ;# ">
+"354
+[; <" PORTD equ 08h ;# ">
+"416
+[; <" PORTE equ 09h ;# ">
+"454
+[; <" PCLATH equ 0Ah ;# ">
+"461
+[; <" INTCON equ 0Bh ;# ">
+"539
+[; <" PIR1 equ 0Ch ;# ">
+"595
+[; <" PIR2 equ 0Dh ;# ">
+"652
+[; <" TMR1 equ 0Eh ;# ">
+"659
+[; <" TMR1L equ 0Eh ;# ">
+"666
+[; <" TMR1H equ 0Fh ;# ">
+"673
+[; <" T1CON equ 010h ;# ">
+"767
+[; <" TMR2 equ 011h ;# ">
+"774
+[; <" T2CON equ 012h ;# ">
+"845
+[; <" SSPBUF equ 013h ;# ">
+"852
+[; <" SSPCON equ 014h ;# ">
+"922
+[; <" CCPR1 equ 015h ;# ">
+"929
+[; <" CCPR1L equ 015h ;# ">
+"936
+[; <" CCPR1H equ 016h ;# ">
+"943
+[; <" CCP1CON equ 017h ;# ">
+"1040
+[; <" RCSTA equ 018h ;# ">
+"1135
+[; <" TXREG equ 019h ;# ">
+"1142
+[; <" RCREG equ 01Ah ;# ">
+"1149
+[; <" CCPR2 equ 01Bh ;# ">
+"1156
+[; <" CCPR2L equ 01Bh ;# ">
+"1163
+[; <" CCPR2H equ 01Ch ;# ">
+"1170
+[; <" CCP2CON equ 01Dh ;# ">
+"1240
+[; <" ADRESH equ 01Eh ;# ">
+"1247
+[; <" ADCON0 equ 01Fh ;# ">
+"1348
+[; <" OPTION_REG equ 081h ;# ">
+"1418
+[; <" TRISA equ 085h ;# ">
+"1480
+[; <" TRISB equ 086h ;# ">
+"1542
+[; <" TRISC equ 087h ;# ">
+"1604
+[; <" TRISD equ 088h ;# ">
+"1666
+[; <" TRISE equ 089h ;# ">
+"1704
+[; <" PIE1 equ 08Ch ;# ">
+"1760
+[; <" PIE2 equ 08Dh ;# ">
+"1817
+[; <" PCON equ 08Eh ;# ">
+"1864
+[; <" OSCCON equ 08Fh ;# ">
+"1929
+[; <" OSCTUNE equ 090h ;# ">
+"1981
+[; <" SSPCON2 equ 091h ;# ">
+"2043
+[; <" PR2 equ 092h ;# ">
+"2050
+[; <" SSPADD equ 093h ;# ">
+"2057
+[; <" SSPMSK equ 093h ;# ">
+"2062
+[; <" MSK equ 093h ;# ">
+"2179
+[; <" SSPSTAT equ 094h ;# ">
+"2348
+[; <" WPUB equ 095h ;# ">
+"2418
+[; <" IOCB equ 096h ;# ">
+"2488
+[; <" VRCON equ 097h ;# ">
+"2558
+[; <" TXSTA equ 098h ;# ">
+"2644
+[; <" SPBRG equ 099h ;# ">
+"2706
+[; <" SPBRGH equ 09Ah ;# ">
+"2776
+[; <" PWM1CON equ 09Bh ;# ">
+"2846
+[; <" ECCPAS equ 09Ch ;# ">
+"2928
+[; <" PSTRCON equ 09Dh ;# ">
+"2972
+[; <" ADRESL equ 09Eh ;# ">
+"2979
+[; <" ADCON1 equ 09Fh ;# ">
+"3013
+[; <" WDTCON equ 0105h ;# ">
+"3066
+[; <" CM1CON0 equ 0107h ;# ">
+"3131
+[; <" CM2CON0 equ 0108h ;# ">
+"3196
+[; <" CM2CON1 equ 0109h ;# ">
+"3247
+[; <" EEDATA equ 010Ch ;# ">
+"3252
+[; <" EEDAT equ 010Ch ;# ">
+"3259
+[; <" EEADR equ 010Dh ;# ">
+"3266
+[; <" EEDATH equ 010Eh ;# ">
+"3273
+[; <" EEADRH equ 010Fh ;# ">
+"3280
+[; <" SRCON equ 0185h ;# ">
+"3337
+[; <" BAUDCTL equ 0187h ;# ">
+"3389
+[; <" ANSEL equ 0188h ;# ">
+"3451
+[; <" ANSELH equ 0189h ;# ">
+"3501
+[; <" EECON1 equ 018Ch ;# ">
+"3546
+[; <" EECON2 equ 018Dh ;# ">
+[v $root$_isr `(v ~T0 @X0 0 e ]
+"58 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 58: void __attribute__((picinterrupt(("")))) isr(void)
+[v _isr `(v ~T1 @X0 1 ef ]
+"59
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 59: {
+{
+[e :U _isr ]
+[f ]
+"62
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 62: }
+[e :UE 138 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"66
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 66: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"67
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 67: {
+{
+[e :U _main ]
+[f ]
+"68
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 68:     setup();
+[e ( _setup ..  ]
+"69
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 69:     Lcd_Init();
+[e ( _Lcd_Init ..  ]
+"71
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 71:     while(1)
+[e :U 141 ]
+"72
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 72:     {
+{
+"75
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 75:         Lcd_Set_Cursor(1,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"76
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 76:         Lcd_Write_String("esto es una ");
+[e ( _Lcd_Write_String (1 :s 1C ]
+"77
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 77:         Lcd_Set_Cursor(2,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"78
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 78:         Lcd_Write_String("prueba 2");
+[e ( _Lcd_Write_String (1 :s 2C ]
+"83
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 83:     }
+}
+[e :U 140 ]
+[e $U 141  ]
+[e :U 142 ]
+"84
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 84: }
+[e :UE 139 ]
+}
+"88
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 88: void setup(void)
+[v _setup `(v ~T0 @X0 1 ef ]
+"89
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 89: {
+{
+[e :U _setup ]
+[f ]
+"91
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 91:     ANSEL=0;
+[e = _ANSEL -> -> 0 `i `uc ]
+"92
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 92:     ANSELH=0;
+[e = _ANSELH -> -> 0 `i `uc ]
+"94
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 94:     TRISB = 0x00;
+[e = _TRISB -> -> 0 `i `uc ]
+"95
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 95:     TRISE=0;
+[e = _TRISE -> -> 0 `i `uc ]
+"99
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 99:     osc_config(8);
+[e ( _osc_config (1 -> -> 8 `i `uc ]
+"103
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/pruebaMaster2.X/mainPrueba2.c: 103: }
+[e :UE 143 ]
+}
+[a 2C 112 114 117 101 98 97 32 50 0 ]
+[a 1C 101 115 116 111 32 101 115 32 117 110 97 32 0 ]
