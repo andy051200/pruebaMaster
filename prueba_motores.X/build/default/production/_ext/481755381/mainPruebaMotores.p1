@@ -12,27 +12,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S15 . . . ]
 "482
 [v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
-"420
-[s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S14 . RE0 RE1 RE2 RE3 ]
-"419
-[u S13 `S14 1 ]
-[n S13 . . ]
-"427
-[v _PORTEbits `VS13 ~T0 @X0 0 e@9 ]
+"228
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"543
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
+"542
+[u S18 `S19 1 ]
+[n S18 . . ]
+"553
+[v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
+"856
+[s S30 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S30 . SSPM CKP SSPEN SSPOV WCOL ]
+"863
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"855
+[u S29 `S30 1 `S31 1 ]
+[n S29 . . . ]
+"870
+[v _SSPCONbits `VS29 ~T0 @X0 0 e@20 ]
+"843
+[v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
+"2183
+[s S82 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S82 . BF UA R_nW S P D_nA CKE SMP ]
+"2193
+[s S83 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S83 . . R . D ]
+"2199
+[s S84 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S84 . . I2C_READ I2C_START I2C_STOP I2C_DATA ]
+"2206
+[s S85 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S85 . . nW . nA ]
+"2212
+[s S86 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S86 . . nWRITE . nADDRESS ]
+"2218
+[s S87 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S87 . . R_W . D_A ]
+"2224
+[s S88 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S88 . . READ_WRITE . DATA_ADDRESS ]
+"2182
+[u S81 `S82 1 `S83 1 `S84 1 `S85 1 `S86 1 `S87 1 `S88 1 ]
+[n S81 . . . . . . . . ]
+"2231
+[v _SSPSTATbits `VS81 ~T0 @X0 0 e@148 ]
 [v F1284 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF1284 ~T0 @X0 0 e ]
 [p i __delay ]
-"59 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
-[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
-"4322
-[v _T0IF `Vb ~T0 @X0 0 e@90 ]
-"228
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"3641 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
+[v _BF `Vb ~T0 @X0 0 e@1184 ]
 [p mainexit ]
-"55 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 55: void setup(void);
+"57 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 57: void setup(void);
 [v _setup `(v ~T0 @X0 0 ef ]
 "234 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
 [s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -42,12 +79,55 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S7 . . ]
 "245
 [v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
+"420
+[s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S14 . RE0 RE1 RE2 RE3 ]
+"419
+[u S13 `S14 1 ]
+[n S13 . . ]
+"427
+[v _PORTEbits `VS13 ~T0 @X0 0 e@9 ]
+"296
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"295
+[u S9 `S10 1 ]
+[n S9 . . ]
+"307
+[v _PORTCbits `VS9 ~T0 @X0 0 e@7 ]
+"58 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 58: void toggle_adc(void);
+[v _toggle_adc `(v ~T0 @X0 0 ef ]
+"1546 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1545
+[u S56 `S57 1 ]
+[n S56 . . ]
+"1557
+[v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
 "352
 [v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"1670
+[s S61 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S61 . TRISE0 TRISE1 TRISE2 TRISE3 ]
+"1669
+[u S60 `S61 1 ]
+[n S60 . . ]
+"1677
+[v _TRISEbits `VS60 ~T0 @X0 0 e@137 ]
 "3387
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "3449
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"3393
+[s S133 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S133 . ANS0 ANS1 ANS2 ANS3 ANS4 ANS5 ANS6 ANS7 ]
+"3392
+[u S132 `S133 1 ]
+[n S132 . . ]
+"3404
+[v _ANSELbits `VS132 ~T0 @X0 0 e@392 ]
 "1484
 [s S55 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S55 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
@@ -58,19 +138,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _TRISBbits `VS54 ~T0 @X0 0 e@134 ]
 "1602
 [v _TRISD `Vuc ~T0 @X0 0 e@136 ]
-"1670
-[s S61 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S61 . TRISE0 TRISE1 TRISE2 TRISE3 ]
-"1669
-[u S60 `S61 1 ]
-[n S60 . . ]
-"1677
-[v _TRISEbits `VS60 ~T0 @X0 0 e@137 ]
 "414
 [v _PORTE `Vuc ~T0 @X0 0 e@9 ]
 "14 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/Osc_config.h
 [; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/Osc_config.h: 14: void osc_config(uint8_t freq);
 [v _osc_config `(v ~T0 @X0 0 ef1`uc ]
+"13 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/ADC_CONFIG.h
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/ADC_CONFIG.h: 13: void ADC_config(void);
+[v _ADC_config `(v ~T0 @X0 0 ef ]
+"64 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/I2C.h
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/I2C.h: 64: void I2C_Slave_Init(uint8_t address);
+[v _I2C_Slave_Init `(v ~T0 @X0 0 ef1`uc ]
 "1352 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
 [s S50 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S50 . PS PSA T0SE T0CS INTEDG nRBPU ]
@@ -104,6 +182,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S92 . . . ]
 "2436
 [v _IOCBbits `VS92 ~T0 @X0 0 e@150 ]
+"1251
+[s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
+[n S45 . ADON GO_nDONE CHS ADCS ]
+"1257
+[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S46 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
+"1267
+[s S47 :1 `uc 1 :1 `uc 1 ]
+[n S47 . . nDONE ]
+"1271
+[s S48 :1 `uc 1 :1 `uc 1 ]
+[n S48 . . GO_DONE ]
+"1250
+[u S44 `S45 1 `S46 1 `S47 1 `S48 1 ]
+[n S44 . . . . . ]
+"1276
+[v _ADCON0bits `VS44 ~T0 @X0 0 e@31 ]
+"1238
+[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
+"2970
+[v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
 "15 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c
 [p x FOSC  =  INTRC_NOCLKOUT    ]
 "16
@@ -285,263 +384,440 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; <" EECON2 equ 018Dh ;# ">
 "50 C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 50: unsigned char cuenta, cuenta_total;
-[v _cuenta `uc ~T0 @X0 1 e ]
-[v _cuenta_total `uc ~T0 @X0 1 e ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 50: int conversion1, conversion_total, temperatura_aprox;
+[v _conversion1 `i ~T0 @X0 1 e ]
+[v _conversion_total `i ~T0 @X0 1 e ]
+[v _temperatura_aprox `i ~T0 @X0 1 e ]
 "51
 [; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 51: unsigned char antirrebote, botonazos;
 [v _antirrebote `uc ~T0 @X0 1 e ]
 [v _botonazos `uc ~T0 @X0 1 e ]
+"52
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 52: unsigned char delay1, delay2;
+[v _delay1 `uc ~T0 @X0 1 e ]
+[v _delay2 `uc ~T0 @X0 1 e ]
+"53
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 53: uint8_t z = 0, motor_recibido, BASURA;
+[v _z `uc ~T0 @X0 1 e ]
+[i _z
+-> -> 0 `i `uc
+]
+[v _motor_recibido `uc ~T0 @X0 1 e ]
+[v _BASURA `uc ~T0 @X0 1 e ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
-"60
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 60: void __attribute__((picinterrupt(("")))) isr(void)
+"62
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 62: void __attribute__((picinterrupt(("")))) isr(void)
 [v _isr `(v ~T1 @X0 1 ef ]
-"61
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 61: {
+"63
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 63: {
 {
 [e :U _isr ]
 [f ]
-"62
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 62:     if (INTCONbits.T0IF)
-[e $ ! != -> . . _INTCONbits 0 2 `i -> 0 `i 139  ]
-"63
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 63:     {
-{
-"64
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 64:         if (botonazos==1)
-[e $ ! == -> _botonazos `i -> 1 `i 140  ]
 "65
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 65:         {
-{
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 65:     if (INTCONbits.RBIF)
+[e $ ! != -> . . _INTCONbits 0 0 `i -> 0 `i 139  ]
 "66
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 66:             PORTEbits.RE0=1;
-[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
-"67
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 67:             _delay((unsigned long)((2)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"68
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 68:             PORTEbits.RE0=0;
-[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-"69
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 69:             TMR0 = 70;
-[e = _TMR0 -> -> 70 `i `uc ]
-"70
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 70:             INTCONbits.T0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"71
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 71:         }
-}
-[e :U 140 ]
-"72
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 72:         if (botonazos==2)
-[e $ ! == -> _botonazos `i -> 2 `i 141  ]
-"73
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 73:         {
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 66:     {
 {
+"67
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 67:         switch(PORTB)
+[e $U 141  ]
+"68
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 68:         {
+{
+"69
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 69:             default:
+[e :U 142 ]
+"70
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 70:                 antirrebote=0;
+[e = _antirrebote -> -> 0 `i `uc ]
+"71
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 71:                 break;
+[e $U 140  ]
+"72
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 72:             case(0b11111101):
+[e :U 143 ]
+"73
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 73:                 antirrebote=1;
+[e = _antirrebote -> -> 1 `i `uc ]
 "74
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 74:             PORTEbits.RE0=1;
-[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 74:                 break;
+[e $U 140  ]
 "75
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 75:             _delay((unsigned long)((1.5)*(4000000/4000.0)));
-[e ( __delay (1 -> * .1.5 / -> -> 4000000 `l `d .4000.0 `ul ]
-"76
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 76:             PORTEbits.RE0=0;
-[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-"77
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 77:             TMR0 = 72;
-[e = _TMR0 -> -> 72 `i `uc ]
-"78
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 78:             INTCONbits.T0IF=0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"79
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 79:         }
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 75:         }
 }
+[e $U 140  ]
 [e :U 141 ]
-"80
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 80:         T0IF=0;
-[e = _T0IF -> -> 0 `i `b ]
-"81
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 81:     }
+[e [\ -> _PORTB `i , $ -> 253 `i 143
+ 142 ]
+[e :U 140 ]
+"76
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 76:         INTCONbits.RBIF=0;
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+"77
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 77:     }
 }
 [e :U 139 ]
+"79
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 79:     if(PIR1bits.SSPIF == 1){
+[e $ ! == -> . . _PIR1bits 0 3 `i -> 1 `i 144  ]
+{
+"81
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 81:         SSPCONbits.CKP = 0;
+[e = . . _SSPCONbits 0 1 -> -> 0 `i `uc ]
 "83
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 83:     if (INTCONbits.RBIF)
-[e $ ! != -> . . _INTCONbits 0 0 `i -> 0 `i 142  ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 83:         if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+[e $ ! || != -> . . _SSPCONbits 0 3 `i -> 0 `i != -> . . _SSPCONbits 0 4 `i -> 0 `i 145  ]
+{
 "84
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 84:     {
-{
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 84:             motor_recibido = SSPBUF;
+[e = _motor_recibido _SSPBUF ]
 "85
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 85:         switch(PORTB)
-[e $U 144  ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 85:             SSPCONbits.SSPOV = 0;
+[e = . . _SSPCONbits 0 3 -> -> 0 `i `uc ]
 "86
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 86:         {
-{
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 86:             SSPCONbits.WCOL = 0;
+[e = . . _SSPCONbits 0 4 -> -> 0 `i `uc ]
 "87
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 87:             default:
-[e :U 145 ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 87:             SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
 "88
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 88:                 antirrebote=0;
-[e = _antirrebote -> -> 0 `i `uc ]
-"89
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 89:                 break;
-[e $U 143  ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 88:         }
+}
+[e :U 145 ]
 "90
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 90:             case(0b11111101):
-[e :U 146 ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 90:         if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW)
+[e $ ! && ! != -> . . _SSPSTATbits 0 5 `i -> 0 `i ! != -> . . _SSPSTATbits 0 2 `i -> 0 `i 146  ]
 "91
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 91:                 antirrebote=1;
-[e = _antirrebote -> -> 1 `i `uc ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 91:         {
+{
 "92
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 92:                 break;
-[e $U 143  ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 92:             motor_recibido= SSPBUF;
+[e = _motor_recibido _SSPBUF ]
 "93
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 93:         }
-}
-[e $U 143  ]
-[e :U 144 ]
-[e [\ -> _PORTB `i , $ -> 253 `i 146
- 145 ]
-[e :U 143 ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 93:             PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "94
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 94:         INTCONbits.RBIF=0;
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 94:             SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
 "95
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 95:     }
-}
-[e :U 142 ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 95:             while(!SSPSTATbits.BF);
+[e $U 147  ]
+[e :U 148 ]
+[e :U 147 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 148  ]
+[e :U 149 ]
 "96
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 96: }
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 96:             motor_recibido = SSPBUF;
+[e = _motor_recibido _SSPBUF ]
+"97
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 97:             _delay((unsigned long)((200)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"99
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 99:         }
+}
+[e $U 150  ]
+"100
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 100:         else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+[e :U 146 ]
+[e $ ! && ! != -> . . _SSPSTATbits 0 5 `i -> 0 `i != -> . . _SSPSTATbits 0 2 `i -> 0 `i 151  ]
+{
+"101
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 101:             z = SSPBUF;
+[e = _z _SSPBUF ]
+"102
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 102:             BF = 0;
+[e = _BF -> -> 0 `i `b ]
+"103
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 103:             SSPBUF = temperatura_aprox;
+[e = _SSPBUF -> _temperatura_aprox `uc ]
+"104
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 104:             SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
+"105
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 105:             _delay((unsigned long)((200)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"106
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 106:             while(SSPSTATbits.BF);
+[e $U 152  ]
+[e :U 153 ]
+[e :U 152 ]
+[e $ != -> . . _SSPSTATbits 0 0 `i -> 0 `i 153  ]
+[e :U 154 ]
+"107
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 107:         }
+}
+[e :U 151 ]
+[e :U 150 ]
+"109
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 109:         PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"110
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 110:     }
+}
+[e :U 144 ]
+"111
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 111: }
 [e :UE 138 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"100
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 100: void main(void)
+"115
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 115: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"101
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 101: {
+"116
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 116: {
 {
 [e :U _main ]
 [f ]
-"102
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 102:     setup();
+"117
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 117:     setup();
 [e ( _setup ..  ]
-"104
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 104:     while(1)
-[e :U 149 ]
-"105
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 105:     {
-{
-"107
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 107:         if (antirrebote==1 && PORTBbits.RB1==0 )
-[e $ ! && == -> _antirrebote `i -> 1 `i == -> . . _PORTBbits 0 1 `i -> 0 `i 151  ]
-"108
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 108:         {
-{
-"109
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 109:             botonazos++;
-[e ++ _botonazos -> -> 1 `i `uc ]
-"110
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 110:             antirrebote=0;
-[e = _antirrebote -> -> 0 `i `uc ]
-"111
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 111:             if(botonazos>2)
-[e $ ! > -> _botonazos `i -> 2 `i 152  ]
-"112
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 112:                 botonazos=0;
-[e = _botonazos -> -> 0 `i `uc ]
-[e :U 152 ]
-"113
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 113:         }
-}
-[e :U 151 ]
-"115
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 115:         PORTD=botonazos;
-[e = _PORTD _botonazos ]
 "118
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 118:     }
-}
-[e :U 148 ]
-[e $U 149  ]
-[e :U 150 ]
-"120
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 120: }
-[e :UE 147 ]
-}
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 118:     while(1)
+[e :U 157 ]
+"119
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 119:     {
+{
+"121
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 121:         if (antirrebote==1 && PORTBbits.RB1==0 )
+[e $ ! && == -> _antirrebote `i -> 1 `i == -> . . _PORTBbits 0 1 `i -> 0 `i 159  ]
+"122
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 122:         {
+{
+"123
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 123:             botonazos++;
+[e ++ _botonazos -> -> 1 `i `uc ]
 "124
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 124: void setup(void)
-[v _setup `(v ~T0 @X0 1 ef ]
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 124:             antirrebote=0;
+[e = _antirrebote -> -> 0 `i `uc ]
 "125
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 125: {
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 125:             if(botonazos>1)
+[e $ ! > -> _botonazos `i -> 1 `i 160  ]
+"126
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 126:                 botonazos=0;
+[e = _botonazos -> -> 0 `i `uc ]
+[e :U 160 ]
+"127
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 127:         }
+}
+[e :U 159 ]
+"129
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 129:         if (botonazos==1)
+[e $ ! == -> _botonazos `i -> 1 `i 161  ]
+"130
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 130:         {
+{
+"131
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 131:             PORTEbits.RE0=1;
+[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
+"132
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 132:             PORTCbits.RC2=1;
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+"133
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 133:             _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"134
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 134:             PORTEbits.RE0=0;
+[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+"135
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 135:             PORTCbits.RC2=0;
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"136
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 136:             _delay((unsigned long)((18)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 18 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"137
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 137:         }
+}
+[e $U 162  ]
+"138
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 138:         else
+[e :U 161 ]
+"139
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 139:         {
+{
+"140
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 140:             PORTEbits.RE0=1;
+[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
+"141
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 141:             PORTCbits.RC2=1;
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+"142
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 142:             _delay((unsigned long)((2)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"143
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 143:             PORTEbits.RE0=0;
+[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+"144
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 144:             PORTCbits.RC2=0;
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"145
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 145:             _delay((unsigned long)((17)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 17 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"146
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 146:         }
+}
+[e :U 162 ]
+"148
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 148:         toggle_adc();
+[e ( _toggle_adc ..  ]
+"150
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 150:         TRISCbits.TRISC2=1;
+[e = . . _TRISCbits 0 2 -> -> 1 `i `uc ]
+"151
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 151:         if(temperatura_aprox>25)
+[e $ ! > _temperatura_aprox -> 25 `i 163  ]
+"152
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 152:             TRISCbits.TRISC2=0;
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+[e :U 163 ]
+"153
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 153:         PORTD=temperatura_aprox;
+[e = _PORTD -> _temperatura_aprox `uc ]
+"155
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 155:         if(motor_recibido==1)
+[e $ ! == -> _motor_recibido `i -> 1 `i 164  ]
+"156
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 156:         {
+{
+"157
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 157:             TRISEbits.TRISE0=1;
+[e = . . _TRISEbits 0 0 -> -> 1 `i `uc ]
+"158
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 158:             TRISCbits.TRISC2=1;
+[e = . . _TRISCbits 0 2 -> -> 1 `i `uc ]
+"159
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 159:         }
+}
+[e $U 165  ]
+"160
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 160:         else
+[e :U 164 ]
+"161
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 161:         {
+{
+"162
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 162:             TRISEbits.TRISE0=0;
+[e = . . _TRISEbits 0 0 -> -> 0 `i `uc ]
+"163
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 163:             TRISCbits.TRISC2=0;
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+"164
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 164:         }
+}
+[e :U 165 ]
+"165
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 165:     }
+}
+[e :U 156 ]
+[e $U 157  ]
+[e :U 158 ]
+"167
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 167: }
+[e :UE 155 ]
+}
+"171
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 171: void setup(void)
+[v _setup `(v ~T0 @X0 1 ef ]
+"172
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 172: {
 {
 [e :U _setup ]
 [f ]
-"127
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 127:     ANSEL=0;
+"174
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 174:     ANSEL=0;
 [e = _ANSEL -> -> 0 `i `uc ]
-"128
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 128:     ANSELH=0;
+"175
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 175:     ANSELH=0;
 [e = _ANSELH -> -> 0 `i `uc ]
-"130
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 130:     TRISBbits.TRISB1=1;
+"176
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 176:     ANSELbits.ANS0=1;
+[e = . . _ANSELbits 0 0 -> -> 1 `i `uc ]
+"178
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 178:     TRISBbits.TRISB1=1;
 [e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
-"131
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 131:     TRISD=0;
+"179
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 179:     TRISCbits.TRISC2=0;
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+"180
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 180:     TRISD=0;
 [e = _TRISD -> -> 0 `i `uc ]
-"132
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 132:     TRISEbits.TRISE0=0;
+"181
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 181:     TRISEbits.TRISE0=0;
 [e = . . _TRISEbits 0 0 -> -> 0 `i `uc ]
-"135
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 135:     PORTB=0;
+"184
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 184:     PORTB=0;
 [e = _PORTB -> -> 0 `i `uc ]
-"136
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 136:     PORTD=0;
+"185
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 185:     PORTD=0;
 [e = _PORTD -> -> 0 `i `uc ]
-"137
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 137:     PORTE=0;
+"186
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 186:     PORTE=0;
 [e = _PORTE -> -> 0 `i `uc ]
-"139
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 139:     osc_config(4);
-[e ( _osc_config (1 -> -> 4 `i `uc ]
-"141
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 141:     OPTION_REGbits.T0CS = 0;
-[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
-"142
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 142:     OPTION_REGbits.PSA = 0;
-[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
-"143
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 143:     OPTION_REGbits.PS = 0b111;
-[e = . . _OPTION_REGbits 0 0 -> -> 7 `i `uc ]
-"144
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 144:     TMR0 = 78;
-[e = _TMR0 -> -> 78 `i `uc ]
-"146
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 146:     OPTION_REGbits.nRBPU=0;
+"188
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 188:     osc_config(8);
+[e ( _osc_config (1 -> -> 8 `i `uc ]
+"191
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 191:     ADC_config();
+[e ( _ADC_config ..  ]
+"193
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 193:     I2C_Slave_Init(0x60);
+[e ( _I2C_Slave_Init (1 -> -> 96 `i `uc ]
+"195
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 195:     OPTION_REGbits.nRBPU=0;
 [e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
-"147
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 147:     WPUBbits.WPUB1=1;
+"196
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 196:     WPUBbits.WPUB1=1;
 [e = . . _WPUBbits 1 1 -> -> 1 `i `uc ]
-"150
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 150:     INTCONbits.GIE=1;
+"199
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 199:     INTCONbits.GIE=1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"151
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 151:     INTCONbits.PEIE = 1;
+"200
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 200:     INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"152
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 152:     INTCONbits.T0IE=1;
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-"153
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 153:     INTCONbits.T0IF=0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"154
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 154:     INTCONbits.RBIE=1;
+"205
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 205:     INTCONbits.RBIE=1;
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"155
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 155:     INTCONbits.RBIF=0;
+"206
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 206:     INTCONbits.RBIF=0;
 [e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"156
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 156:     IOCBbits.IOCB1=1;
+"207
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 207:     IOCBbits.IOCB1=1;
 [e = . . _IOCBbits 1 1 -> -> 1 `i `uc ]
-"157
-[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 157: }
-[e :UE 153 ]
+"208
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 208: }
+[e :UE 166 ]
+}
+"213
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 213: void toggle_adc(void)
+[v _toggle_adc `(v ~T0 @X0 1 ef ]
+"214
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 214: {
+{
+[e :U _toggle_adc ]
+[f ]
+"215
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 215:     if (ADCON0bits.GO==0)
+[e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 168  ]
+"216
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 216:     {
+{
+"218
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 218:         conversion_total=(ADRESH>>3)+ADRESL;
+[e = _conversion_total + >> -> _ADRESH `i -> 3 `i -> _ADRESL `i ]
+"219
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 219:         temperatura_aprox=((conversion_total)/2.046);
+[e = _temperatura_aprox -> / -> _conversion_total `d .2.046 `i ]
+"220
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 220:         _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"221
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 221:         ADCON0bits.GO=1;
+[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+"222
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 222:     }
+}
+[e :U 168 ]
+"224
+[; ;C:/Users/Andy Bonilla/Documents/GitHub/ED2/pruebaMaster/prueba_motores.X/mainPruebaMotores.c: 224: }
+[e :UE 167 ]
 }

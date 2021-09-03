@@ -12,7 +12,7 @@
 #include <stdint.h>             //se incluye libreria
 #include <pic16f887.h>          //se incluye libreria del pic
 #include "ADC_CONFIG.h"
-#define _XTAL_FREQ 4000000
+#define _XTAL_FREQ 8000000
 
 /*-----------------------------------------------------------------------------
 -------------------------- FUNCION DE LIBRERIA --------------------------------
@@ -22,7 +22,7 @@
 void ADC_config()
 {
     //CONFIGURACION DE ADC
-    ADCON1bits.ADFM = 0 ;       // se justifica a la isquierda
+    ADCON1bits.ADFM = 1;       // se justifica a la derecha
     ADCON1bits.VCFG0 = 0 ;      // voltajes de referencia
     ADCON1bits.VCFG1 = 0 ;      // voltaje de referencia
     

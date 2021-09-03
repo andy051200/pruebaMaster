@@ -38,47 +38,29 @@ Descripcion:
 #include <xc.h>
 #include <proc/pic16f887.h>
 #include "Osc_config.h"
-//#include "ADC_CONFIG.h"
-//#include "I2C.h"
+#include "ADC_CONFIG.h"
+#include "I2C.h"
 /*-----------------------------------------------------------------------------
  ----------------------- VARIABLES A IMPLEMTENTAR------------------------------
  -----------------------------------------------------------------------------*/
 
 //-------DIRECTIVAS DEL COMPILADOR
-#define _XTAL_FREQ 4000000
+#define _XTAL_FREQ 8000000
 //-------VARIABLES DE PROGRAMA
-unsigned char cuenta, cuenta_total;
+int conversion1, conversion_total, temperatura_aprox;
 unsigned char antirrebote, botonazos;
+unsigned char delay1, delay2;
+uint8_t z = 0, motor_recibido, BASURA;
 /*-----------------------------------------------------------------------------
  ------------------------ PROTOTIPOS DE FUNCIONES ------------------------------
  -----------------------------------------------------------------------------*/
 void setup(void);
-
+void toggle_adc(void);
 /*-----------------------------------------------------------------------------
  --------------------------- INTERRUPCIONES -----------------------------------
  -----------------------------------------------------------------------------*/
 void __interrupt() isr(void) //funcion de interrupciones
-{
-    if (INTCONbits.T0IF)
-    {
-        if (botonazos==1)  //variar oscilacion de 18ms
-        {
-            PORTEbits.RE0=1;
-            __delay_ms(2);
-            PORTEbits.RE0=0;
-            TMR0 = 70;  
-            INTCONbits.T0IF = 0;
-        }
-        if (botonazos==2)    //variar oscilacion de 18.5ms
-        {
-            PORTEbits.RE0=1;
-            __delay_ms(1.5);
-            PORTEbits.RE0=0;
-            TMR0 = 72;
-            INTCONbits.T0IF=0;
-        }   
-        T0IF=0;
-    }
+{   
     //-------INTERRUPCION POR BOTONAZO
     if (INTCONbits.RBIF)
     {
@@ -93,6 +75,39 @@ void __interrupt() isr(void) //funcion de interrupciones
         }
         INTCONbits.RBIF=0;
     }
+    //-------INTERRUPCION POR I2C
+    if(PIR1bits.SSPIF == 1){    //Le va a mandar la cantidad de parqueos habilitados al master
+
+        SSPCONbits.CKP = 0;
+       
+        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+            motor_recibido = SSPBUF;                 // Read the previous value to clear the buffer
+            SSPCONbits.SSPOV = 0;       // Clear the overflow flag
+            SSPCONbits.WCOL = 0;        // Clear the collision bit
+            SSPCONbits.CKP = 1;         // Enables SCL (Clock)
+        }
+
+        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) 
+        {
+            motor_recibido= SSPBUF;                 // Lectura del SSBUF para limpiar el buffer y la bandera BF
+            PIR1bits.SSPIF = 0;         // Limpia bandera de interrupci n recepci n/transmisi n SSP
+            SSPCONbits.CKP = 1;         // Habilita entrada de pulsos de reloj SCL
+            while(!SSPSTATbits.BF);     // Esperar a que la recepci n se complete
+            motor_recibido = SSPBUF;             // Guardar en z el valor del buffer de recepci n
+            __delay_us(200);
+            
+        }
+        else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+            z = SSPBUF;
+            BF = 0;
+            SSPBUF = temperatura_aprox;     //se manda le temperatura
+            SSPCONbits.CKP = 1;
+            __delay_us(200);
+            while(SSPSTATbits.BF);
+        }
+       
+        PIR1bits.SSPIF = 0;    
+    }
 }
 /*-----------------------------------------------------------------------------
  ----------------------------- MAIN LOOP --------------------------------------
@@ -100,7 +115,6 @@ void __interrupt() isr(void) //funcion de interrupciones
 void main(void)
 {
     setup();
-    
     while(1)
     {
         //-------ANTIRREBOTES DE BOTON 
@@ -108,13 +122,46 @@ void main(void)
         {
             botonazos++;
             antirrebote=0;
-            if(botonazos>2)
+            if(botonazos>1)
                 botonazos=0;
         }
-
-        PORTD=botonazos;
-        
-        
+        //-------BOTON DE TALANQUERA
+        if (botonazos==1)
+        {
+            PORTEbits.RE0=1;
+            PORTCbits.RC2=1;
+            __delay_ms(1);
+            PORTEbits.RE0=0;
+            PORTCbits.RC2=0;
+            __delay_ms(18);
+        }
+        else
+        {
+            PORTEbits.RE0=1;
+            PORTCbits.RC2=1;
+            __delay_ms(2);
+            PORTEbits.RE0=0;
+            PORTCbits.RC2=0;
+            __delay_ms(17);
+        }
+        //-------FUNCION PARA JALAR VALORES DE ADC
+        toggle_adc();
+        //-------PARTE PARA ACTIVAR VENTILADOR
+        TRISCbits.TRISC2=1;
+        if(temperatura_aprox>25)
+            TRISCbits.TRISC2=0;
+        PORTD=temperatura_aprox;
+        //-------PARTE PARA FUNCIONAR SI ESTA ABIERTO O NO
+        if(motor_recibido==1)
+        {
+            TRISEbits.TRISE0=1;
+            TRISCbits.TRISC2=1;
+        }
+        else
+        {
+            TRISEbits.TRISE0=0;
+            TRISCbits.TRISC2=0;
+        }
     }
        
 }
@@ -126,8 +173,10 @@ void setup(void)
     //-------CONFIGURACION ENTRADAS ANALOGICAS
     ANSEL=0;
     ANSELH=0;
+    ANSELbits.ANS0=1;                   //entrada para sensor temperatura
     //-------CONFIGURACION IN/OUT
     TRISBbits.TRISB1=1;                 //entrada boton prueba
+    TRISCbits.TRISC2=0;                 //pin de motor DC
     TRISD=0;
     TRISEbits.TRISE0=0;                 //salida para PWM de servo
     
@@ -136,12 +185,12 @@ void setup(void)
     PORTD=0;
     PORTE=0;
     //-------CONFIGURACION DE RELOJ A 8MHz
-    osc_config(4);
-    //-------CONFIGURACION DE TIMER0
-    OPTION_REGbits.T0CS = 0;    //Uso reloj interno
-    OPTION_REGbits.PSA = 0;     //Uso pre-escaler
-    OPTION_REGbits.PS = 0b111;  //PS = 111 / 1:256
-    TMR0 = 78;                  //Reinicio del timmer
+    osc_config(8);
+    
+    //-------CONFIGURACION DEL ADC
+    ADC_config();
+     //-------CONFIGURACION DE COMUNICACION I2C
+    I2C_Slave_Init(0x60);               //se da direccion 0x50    
     //-------CONFIGURACION DE WPUB
     OPTION_REGbits.nRBPU=0;             //se activan WPUB
     WPUBbits.WPUB1=1;                   //RB0, boton prueba
@@ -149,8 +198,10 @@ void setup(void)
     //-------CONFIGURACION DE INTERRUPCIONES
     INTCONbits.GIE=1;                   //se habilita interrupciones globales
     INTCONbits.PEIE = 1;                //habilitan interrupciones por perifericos
-    INTCONbits.T0IE=1;                  //se habilita interrupcion timer0
-    INTCONbits.T0IF=0;                  //se habilita interrupcion timer0
+    //INTCONbits.T0IE=1;                  //se habilita interrupcion timer0
+    //INTCONbits.T0IF=0;                  //se habilita interrupcion timer0
+    //PIE1bits.TMR1IE=1;
+    //PIR1bits.TMR1IF=0;
     INTCONbits.RBIE=1;                  //se  habilita IntOnChange B
     INTCONbits.RBIF=0;                  //se  apaga bandera IntOnChange B
     IOCBbits.IOCB1=1;                   //habilita IOCB RB0
@@ -158,3 +209,16 @@ void setup(void)
 /*-----------------------------------------------------------------------------
  --------------------------------- FUNCIONES ----------------------------------
  -----------------------------------------------------------------------------*/
+
+void toggle_adc(void)
+{
+    if (ADCON0bits.GO==0)
+    {
+        //conversion1=ADRESH;                  //toma los MSB del ADRE
+        conversion_total=(ADRESH>>3)+ADRESL;    //le suma los LSB
+        temperatura_aprox=((conversion_total)/2.046);
+        __delay_ms(1);
+        ADCON0bits.GO=1;
+    }
+    
+}
